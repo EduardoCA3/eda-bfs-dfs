@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard BFS vs DFS</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f3f4f6;
+            --panel: #ffffff;
+            --text: #111827;
+            --muted: #4b5563;
+            --line: #d1d5db;
+            --bfs: #2563eb;
+            --dfs: #f97316;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: #111827;
+            color: white;
+            padding: 28px 36px;
+        }
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+        header p {
+            margin: 0;
+            color: #d1d5db;
+        }
+        main {
+            width: min(1180px, calc(100% - 32px));
+            margin: 24px auto 48px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            padding: 16px;
+        }
+        .card p {
+            margin: 0 0 8px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+        .card strong {
+            font-size: 24px;
+        }
+        .chart {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            margin-bottom: 18px;
+            padding: 12px;
+            overflow-x: auto;
+        }
+        .chart img {
+            width: 100%;
+            min-width: 860px;
+            display: block;
+        }
+        .table-wrap {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            padding: 16px;
+            overflow-x: auto;
+        }
+        h2 {
+            margin: 4px 0 16px;
+            font-size: 22px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 14px;
+        }
+        th, td {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 10px;
+            text-align: left;
+            white-space: nowrap;
+        }
+        th {
+            background: #f9fafb;
+            color: #374151;
+        }
+        .pill {
+            color: white;
+            padding: 3px 9px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        .pill.bfs { background: var(--bfs); }
+        .pill.dfs { background: var(--dfs); }
+        footer {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 18px;
+        }
+        @media (max-width: 850px) {
+            .cards { grid-template-columns: repeat(2, 1fr); }
+            header { padding: 22px 20px; }
+        }
+        @media (max-width: 520px) {
+            .cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comparacion BFS vs DFS</h1>
+        <p>Graficos generados desde salida_resultados/resumen_resultados.csv</p>
+    </header>
+    <main>
+        <section class="cards">
+            <section class='card'><p>Escenarios evaluados</p><strong>9</strong></section>
+<section class='card'><p>BFS con ruta igual o menor</p><strong>9 de 9</strong></section>
+<section class='card'><p>DFS con menor tiempo</p><strong>5 de 9</strong></section>
+<section class='card'><p>DFS con menos nodos visitados</p><strong>9 de 9</strong></section>
+        </section>
+        <section class='chart'><img src='graficos/tiempo_promedio.svg' alt='tiempo_promedio.svg'></section>
+<section class='chart'><img src='graficos/nodos_visitados.svg' alt='nodos_visitados.svg'></section>
+<section class='chart'><img src='graficos/longitud_ruta.svg' alt='longitud_ruta.svg'></section>
+<section class='chart'><img src='graficos/memoria_aproximada.svg' alt='memoria_aproximada.svg'></section>
+        <section class="table-wrap">
+            <h2>Tabla resumen</h2>
+            <table>
+<thead>
+<tr><th>Escenario</th><th>Algoritmo</th><th>Tiempo prom.</th><th>Nodos prom.</th><th>Ruta prom.</th><th>Memoria prom.</th></tr>
+</thead>
+<tbody>
+<tr><td>10x10 - 10%</td><td><span class='pill bfs'>BFS</span></td><td>0.0397 ms</td><td>89.7</td><td>18.0</td><td>99.6</td></tr>
+<tr><td>10x10 - 10%</td><td><span class='pill dfs'>DFS</span></td><td>0.0636 ms</td><td>23.5</td><td>21.0</td><td>39.1</td></tr>
+<tr><td>10x10 - 20%</td><td><span class='pill bfs'>BFS</span></td><td>0.0294 ms</td><td>77.8</td><td>18.0</td><td>87.2</td></tr>
+<tr><td>10x10 - 20%</td><td><span class='pill dfs'>DFS</span></td><td>0.0152 ms</td><td>29.5</td><td>23.8</td><td>43.8</td></tr>
+<tr><td>10x10 - 30%</td><td><span class='pill bfs'>BFS</span></td><td>0.0325 ms</td><td>59.4</td><td>18.9</td><td>66.7</td></tr>
+<tr><td>10x10 - 30%</td><td><span class='pill dfs'>DFS</span></td><td>0.0348 ms</td><td>33.2</td><td>19.8</td><td>43.9</td></tr>
+<tr><td>20x20 - 10%</td><td><span class='pill bfs'>BFS</span></td><td>0.0359 ms</td><td>359.9</td><td>38.0</td><td>380.9</td></tr>
+<tr><td>20x20 - 10%</td><td><span class='pill dfs'>DFS</span></td><td>0.0377 ms</td><td>49.4</td><td>45.2</td><td>84.3</td></tr>
+<tr><td>20x20 - 20%</td><td><span class='pill bfs'>BFS</span></td><td>0.0313 ms</td><td>318.1</td><td>38.0</td><td>338.6</td></tr>
+<tr><td>20x20 - 20%</td><td><span class='pill dfs'>DFS</span></td><td>0.0454 ms</td><td>76.2</td><td>59.9</td><td>113.9</td></tr>
+<tr><td>20x20 - 30%</td><td><span class='pill bfs'>BFS</span></td><td>0.0315 ms</td><td>260.1</td><td>39.3</td><td>276.8</td></tr>
+<tr><td>20x20 - 30%</td><td><span class='pill dfs'>DFS</span></td><td>0.0238 ms</td><td>107.5</td><td>63.9</td><td>141.8</td></tr>
+<tr><td>50x50 - 10%</td><td><span class='pill bfs'>BFS</span></td><td>0.1816 ms</td><td>2249.6</td><td>98.0</td><td>2300.5</td></tr>
+<tr><td>50x50 - 10%</td><td><span class='pill dfs'>DFS</span></td><td>0.0330 ms</td><td>129.9</td><td>123.4</td><td>226.8</td></tr>
+<tr><td>50x50 - 20%</td><td><span class='pill bfs'>BFS</span></td><td>0.2326 ms</td><td>1992.8</td><td>98.1</td><td>2043.1</td></tr>
+<tr><td>50x50 - 20%</td><td><span class='pill dfs'>DFS</span></td><td>0.0346 ms</td><td>284.9</td><td>226.1</td><td>433.0</td></tr>
+<tr><td>50x50 - 30%</td><td><span class='pill bfs'>BFS</span></td><td>0.2344 ms</td><td>1690.0</td><td>100.3</td><td>1732.4</td></tr>
+<tr><td>50x50 - 30%</td><td><span class='pill dfs'>DFS</span></td><td>0.0810 ms</td><td>594.3</td><td>237.6</td><td>747.6</td></tr>
+</tbody>
+</table>
+        </section>
+        <footer>
+            Generado: 2026-06-28 23:11:11. Archivos individuales SVG guardados en salida_resultados/graficos.
+        </footer>
+    </main>
+</body>
+</html>

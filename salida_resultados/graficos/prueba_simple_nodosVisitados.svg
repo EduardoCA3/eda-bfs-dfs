@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="360" viewBox="0 0 620 360">
+<style>
+.titulo{font:700 22px Arial,sans-serif;fill:#111827}
+.eje{font:400 12px Arial,sans-serif;fill:#4b5563}
+.valor{font:700 13px Arial,sans-serif;fill:#111827}
+.grid{stroke:#e5e7eb;stroke-width:1}
+.axis{stroke:#9ca3af;stroke-width:1.2}
+</style>
+<rect x="0" y="0" width="620" height="360" fill="#ffffff"/>
+<text x="310.0" y="32" text-anchor="middle" class="titulo">Nodos visitados</text>
+<text x="310.0" y="54" text-anchor="middle" class="eje">Prueba simple 10x10 - valores en nodos</text>
+<line x1="70" y1="290.0" x2="590" y2="290.0" class="grid"/>
+<text x="58" y="294.0" text-anchor="end" class="eje">0</text>
+<line x1="70" y1="235.5" x2="590" y2="235.5" class="grid"/>
+<text x="58" y="239.5" text-anchor="end" class="eje">24</text>
+<line x1="70" y1="181.0" x2="590" y2="181.0" class="grid"/>
+<text x="58" y="185.0" text-anchor="end" class="eje">48</text>
+<line x1="70" y1="126.5" x2="590" y2="126.5" class="grid"/>
+<text x="58" y="130.5" text-anchor="end" class="eje">72</text>
+<line x1="70" y1="72.0" x2="590" y2="72.0" class="grid"/>
+<text x="58" y="76.0" text-anchor="end" class="eje">96</text>
+<line x1="70" y1="72" x2="70" y2="290" class="axis"/>
+<line x1="70" y1="290" x2="590" y2="290" class="axis"/>
+<rect x="191.4" y="108.3" width="90" height="181.7" fill="#2563eb"/>
+<text x="236.4" y="100.33333333333331" text-anchor="middle" class="valor">80</text>
+<text x="236.4" y="318" text-anchor="middle" class="eje">BFS</text>
+<rect x="378.6" y="217.3" width="90" height="72.7" fill="#f97316"/>
+<text x="423.6" y="209.33333333333334" text-anchor="middle" class="valor">32</text>
+<text x="423.6" y="318" text-anchor="middle" class="eje">DFS</text>
+</svg>

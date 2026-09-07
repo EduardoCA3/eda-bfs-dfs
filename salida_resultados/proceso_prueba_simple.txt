@@ -1,0 +1,612 @@
+PROCESO DETALLADO DE LA PRUEBA SIMPLE
+
+BFS - Busqueda en anchura
+Estructura usada: cola (FIFO).
+Orden de revision: arriba, derecha, abajo, izquierda.
+Inicio: (0,0) | Destino: (9,9)
+Se encola el nodo inicial (0,0).
+Paso 1: se desencola (0,0). Nodos visitados: 1. Elementos pendientes en cola: 0.
+  Revisa arriba -> (-1,0): no se encola porque esta fuera del mapa.
+  Revisa derecha -> (0,1): libre, se marca como visitado y se encola.
+  Revisa abajo -> (1,0): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (0,-1): no se encola porque esta fuera del mapa.
+Paso 2: se desencola (0,1). Nodos visitados: 2. Elementos pendientes en cola: 1.
+  Revisa arriba -> (-1,1): no se encola porque esta fuera del mapa.
+  Revisa derecha -> (0,2): libre, se marca como visitado y se encola.
+  Revisa abajo -> (1,1): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (0,0): no se encola porque ya fue visitado.
+Paso 3: se desencola (1,0). Nodos visitados: 3. Elementos pendientes en cola: 2.
+  Revisa arriba -> (0,0): no se encola porque ya fue visitado.
+  Revisa derecha -> (1,1): no se encola porque ya fue visitado.
+  Revisa abajo -> (2,0): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (1,-1): no se encola porque esta fuera del mapa.
+Paso 4: se desencola (0,2). Nodos visitados: 4. Elementos pendientes en cola: 2.
+  Revisa arriba -> (-1,2): no se encola porque esta fuera del mapa.
+  Revisa derecha -> (0,3): libre, se marca como visitado y se encola.
+  Revisa abajo -> (1,2): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (0,1): no se encola porque ya fue visitado.
+Paso 5: se desencola (1,1). Nodos visitados: 5. Elementos pendientes en cola: 3.
+  Revisa arriba -> (0,1): no se encola porque ya fue visitado.
+  Revisa derecha -> (1,2): no se encola porque ya fue visitado.
+  Revisa abajo -> (2,1): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (1,0): no se encola porque ya fue visitado.
+Paso 6: se desencola (2,0). Nodos visitados: 6. Elementos pendientes en cola: 3.
+  Revisa arriba -> (1,0): no se encola porque ya fue visitado.
+  Revisa derecha -> (2,1): no se encola porque ya fue visitado.
+  Revisa abajo -> (3,0): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (2,-1): no se encola porque esta fuera del mapa.
+Paso 7: se desencola (0,3). Nodos visitados: 7. Elementos pendientes en cola: 3.
+  Revisa arriba -> (-1,3): no se encola porque esta fuera del mapa.
+  Revisa derecha -> (0,4): libre, se marca como visitado y se encola.
+  Revisa abajo -> (1,3): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (0,2): no se encola porque ya fue visitado.
+Paso 8: se desencola (1,2). Nodos visitados: 8. Elementos pendientes en cola: 4.
+  Revisa arriba -> (0,2): no se encola porque ya fue visitado.
+  Revisa derecha -> (1,3): no se encola porque ya fue visitado.
+  Revisa abajo -> (2,2): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (1,1): no se encola porque ya fue visitado.
+Paso 9: se desencola (2,1). Nodos visitados: 9. Elementos pendientes en cola: 4.
+  Revisa arriba -> (1,1): no se encola porque ya fue visitado.
+  Revisa derecha -> (2,2): no se encola porque ya fue visitado.
+  Revisa abajo -> (3,1): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (2,0): no se encola porque ya fue visitado.
+Paso 10: se desencola (3,0). Nodos visitados: 10. Elementos pendientes en cola: 4.
+  Revisa arriba -> (2,0): no se encola porque ya fue visitado.
+  Revisa derecha -> (3,1): no se encola porque ya fue visitado.
+  Revisa abajo -> (4,0): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (3,-1): no se encola porque esta fuera del mapa.
+Paso 11: se desencola (0,4). Nodos visitados: 11. Elementos pendientes en cola: 4.
+  Revisa arriba -> (-1,4): no se encola porque esta fuera del mapa.
+  Revisa derecha -> (0,5): libre, se marca como visitado y se encola.
+  Revisa abajo -> (1,4): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (0,3): no se encola porque ya fue visitado.
+Paso 12: se desencola (1,3). Nodos visitados: 12. Elementos pendientes en cola: 5.
+  Revisa arriba -> (0,3): no se encola porque ya fue visitado.
+  Revisa derecha -> (1,4): no se encola porque ya fue visitado.
+  Revisa abajo -> (2,3): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (1,2): no se encola porque ya fue visitado.
+Paso 13: se desencola (2,2). Nodos visitados: 13. Elementos pendientes en cola: 5.
+  Revisa arriba -> (1,2): no se encola porque ya fue visitado.
+  Revisa derecha -> (2,3): no se encola porque ya fue visitado.
+  Revisa abajo -> (3,2): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (2,1): no se encola porque ya fue visitado.
+Paso 14: se desencola (3,1). Nodos visitados: 14. Elementos pendientes en cola: 5.
+  Revisa arriba -> (2,1): no se encola porque ya fue visitado.
+  Revisa derecha -> (3,2): no se encola porque ya fue visitado.
+  Revisa abajo -> (4,1): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (3,0): no se encola porque ya fue visitado.
+Paso 15: se desencola (4,0). Nodos visitados: 15. Elementos pendientes en cola: 5.
+  Revisa arriba -> (3,0): no se encola porque ya fue visitado.
+  Revisa derecha -> (4,1): no se encola porque ya fue visitado.
+  Revisa abajo -> (5,0): no se encola porque es un obstaculo.
+  Revisa izquierda -> (4,-1): no se encola porque esta fuera del mapa.
+Paso 16: se desencola (0,5). Nodos visitados: 16. Elementos pendientes en cola: 4.
+  Revisa arriba -> (-1,5): no se encola porque esta fuera del mapa.
+  Revisa derecha -> (0,6): libre, se marca como visitado y se encola.
+  Revisa abajo -> (1,5): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (0,4): no se encola porque ya fue visitado.
+Paso 17: se desencola (1,4). Nodos visitados: 17. Elementos pendientes en cola: 5.
+  Revisa arriba -> (0,4): no se encola porque ya fue visitado.
+  Revisa derecha -> (1,5): no se encola porque ya fue visitado.
+  Revisa abajo -> (2,4): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (1,3): no se encola porque ya fue visitado.
+Paso 18: se desencola (2,3). Nodos visitados: 18. Elementos pendientes en cola: 5.
+  Revisa arriba -> (1,3): no se encola porque ya fue visitado.
+  Revisa derecha -> (2,4): no se encola porque ya fue visitado.
+  Revisa abajo -> (3,3): no se encola porque es un obstaculo.
+  Revisa izquierda -> (2,2): no se encola porque ya fue visitado.
+Paso 19: se desencola (3,2). Nodos visitados: 19. Elementos pendientes en cola: 4.
+  Revisa arriba -> (2,2): no se encola porque ya fue visitado.
+  Revisa derecha -> (3,3): no se encola porque es un obstaculo.
+  Revisa abajo -> (4,2): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (3,1): no se encola porque ya fue visitado.
+Paso 20: se desencola (4,1). Nodos visitados: 20. Elementos pendientes en cola: 4.
+  Revisa arriba -> (3,1): no se encola porque ya fue visitado.
+  Revisa derecha -> (4,2): no se encola porque ya fue visitado.
+  Revisa abajo -> (5,1): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (4,0): no se encola porque ya fue visitado.
+Paso 21: se desencola (0,6). Nodos visitados: 21. Elementos pendientes en cola: 4.
+  Revisa arriba -> (-1,6): no se encola porque esta fuera del mapa.
+  Revisa derecha -> (0,7): libre, se marca como visitado y se encola.
+  Revisa abajo -> (1,6): no se encola porque es un obstaculo.
+  Revisa izquierda -> (0,5): no se encola porque ya fue visitado.
+Paso 22: se desencola (1,5). Nodos visitados: 22. Elementos pendientes en cola: 4.
+  Revisa arriba -> (0,5): no se encola porque ya fue visitado.
+  Revisa derecha -> (1,6): no se encola porque es un obstaculo.
+  Revisa abajo -> (2,5): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (1,4): no se encola porque ya fue visitado.
+Paso 23: se desencola (2,4). Nodos visitados: 23. Elementos pendientes en cola: 4.
+  Revisa arriba -> (1,4): no se encola porque ya fue visitado.
+  Revisa derecha -> (2,5): no se encola porque ya fue visitado.
+  Revisa abajo -> (3,4): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (2,3): no se encola porque ya fue visitado.
+Paso 24: se desencola (4,2). Nodos visitados: 24. Elementos pendientes en cola: 4.
+  Revisa arriba -> (3,2): no se encola porque ya fue visitado.
+  Revisa derecha -> (4,3): libre, se marca como visitado y se encola.
+  Revisa abajo -> (5,2): no se encola porque es un obstaculo.
+  Revisa izquierda -> (4,1): no se encola porque ya fue visitado.
+Paso 25: se desencola (5,1). Nodos visitados: 25. Elementos pendientes en cola: 4.
+  Revisa arriba -> (4,1): no se encola porque ya fue visitado.
+  Revisa derecha -> (5,2): no se encola porque es un obstaculo.
+  Revisa abajo -> (6,1): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (5,0): no se encola porque es un obstaculo.
+Paso 26: se desencola (0,7). Nodos visitados: 26. Elementos pendientes en cola: 4.
+  Revisa arriba -> (-1,7): no se encola porque esta fuera del mapa.
+  Revisa derecha -> (0,8): no se encola porque es un obstaculo.
+  Revisa abajo -> (1,7): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (0,6): no se encola porque ya fue visitado.
+Paso 27: se desencola (2,5). Nodos visitados: 27. Elementos pendientes en cola: 4.
+  Revisa arriba -> (1,5): no se encola porque ya fue visitado.
+  Revisa derecha -> (2,6): libre, se marca como visitado y se encola.
+  Revisa abajo -> (3,5): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (2,4): no se encola porque ya fue visitado.
+Paso 28: se desencola (3,4). Nodos visitados: 28. Elementos pendientes en cola: 5.
+  Revisa arriba -> (2,4): no se encola porque ya fue visitado.
+  Revisa derecha -> (3,5): no se encola porque ya fue visitado.
+  Revisa abajo -> (4,4): no se encola porque es un obstaculo.
+  Revisa izquierda -> (3,3): no se encola porque es un obstaculo.
+Paso 29: se desencola (4,3). Nodos visitados: 29. Elementos pendientes en cola: 4.
+  Revisa arriba -> (3,3): no se encola porque es un obstaculo.
+  Revisa derecha -> (4,4): no se encola porque es un obstaculo.
+  Revisa abajo -> (5,3): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (4,2): no se encola porque ya fue visitado.
+Paso 30: se desencola (6,1). Nodos visitados: 30. Elementos pendientes en cola: 4.
+  Revisa arriba -> (5,1): no se encola porque ya fue visitado.
+  Revisa derecha -> (6,2): libre, se marca como visitado y se encola.
+  Revisa abajo -> (7,1): no se encola porque es un obstaculo.
+  Revisa izquierda -> (6,0): libre, se marca como visitado y se encola.
+Paso 31: se desencola (1,7). Nodos visitados: 31. Elementos pendientes en cola: 5.
+  Revisa arriba -> (0,7): no se encola porque ya fue visitado.
+  Revisa derecha -> (1,8): libre, se marca como visitado y se encola.
+  Revisa abajo -> (2,7): no se encola porque es un obstaculo.
+  Revisa izquierda -> (1,6): no se encola porque es un obstaculo.
+Paso 32: se desencola (2,6). Nodos visitados: 32. Elementos pendientes en cola: 5.
+  Revisa arriba -> (1,6): no se encola porque es un obstaculo.
+  Revisa derecha -> (2,7): no se encola porque es un obstaculo.
+  Revisa abajo -> (3,6): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (2,5): no se encola porque ya fue visitado.
+Paso 33: se desencola (3,5). Nodos visitados: 33. Elementos pendientes en cola: 5.
+  Revisa arriba -> (2,5): no se encola porque ya fue visitado.
+  Revisa derecha -> (3,6): no se encola porque ya fue visitado.
+  Revisa abajo -> (4,5): no se encola porque es un obstaculo.
+  Revisa izquierda -> (3,4): no se encola porque ya fue visitado.
+Paso 34: se desencola (5,3). Nodos visitados: 34. Elementos pendientes en cola: 4.
+  Revisa arriba -> (4,3): no se encola porque ya fue visitado.
+  Revisa derecha -> (5,4): libre, se marca como visitado y se encola.
+  Revisa abajo -> (6,3): no se encola porque es un obstaculo.
+  Revisa izquierda -> (5,2): no se encola porque es un obstaculo.
+Paso 35: se desencola (6,2). Nodos visitados: 35. Elementos pendientes en cola: 4.
+  Revisa arriba -> (5,2): no se encola porque es un obstaculo.
+  Revisa derecha -> (6,3): no se encola porque es un obstaculo.
+  Revisa abajo -> (7,2): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (6,1): no se encola porque ya fue visitado.
+Paso 36: se desencola (6,0). Nodos visitados: 36. Elementos pendientes en cola: 4.
+  Revisa arriba -> (5,0): no se encola porque es un obstaculo.
+  Revisa derecha -> (6,1): no se encola porque ya fue visitado.
+  Revisa abajo -> (7,0): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (6,-1): no se encola porque esta fuera del mapa.
+Paso 37: se desencola (1,8). Nodos visitados: 37. Elementos pendientes en cola: 4.
+  Revisa arriba -> (0,8): no se encola porque es un obstaculo.
+  Revisa derecha -> (1,9): libre, se marca como visitado y se encola.
+  Revisa abajo -> (2,8): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (1,7): no se encola porque ya fue visitado.
+Paso 38: se desencola (3,6). Nodos visitados: 38. Elementos pendientes en cola: 5.
+  Revisa arriba -> (2,6): no se encola porque ya fue visitado.
+  Revisa derecha -> (3,7): libre, se marca como visitado y se encola.
+  Revisa abajo -> (4,6): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (3,5): no se encola porque ya fue visitado.
+Paso 39: se desencola (5,4). Nodos visitados: 39. Elementos pendientes en cola: 6.
+  Revisa arriba -> (4,4): no se encola porque es un obstaculo.
+  Revisa derecha -> (5,5): libre, se marca como visitado y se encola.
+  Revisa abajo -> (6,4): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (5,3): no se encola porque ya fue visitado.
+Paso 40: se desencola (7,2). Nodos visitados: 40. Elementos pendientes en cola: 7.
+  Revisa arriba -> (6,2): no se encola porque ya fue visitado.
+  Revisa derecha -> (7,3): libre, se marca como visitado y se encola.
+  Revisa abajo -> (8,2): no se encola porque es un obstaculo.
+  Revisa izquierda -> (7,1): no se encola porque es un obstaculo.
+Paso 41: se desencola (7,0). Nodos visitados: 41. Elementos pendientes en cola: 7.
+  Revisa arriba -> (6,0): no se encola porque ya fue visitado.
+  Revisa derecha -> (7,1): no se encola porque es un obstaculo.
+  Revisa abajo -> (8,0): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (7,-1): no se encola porque esta fuera del mapa.
+Paso 42: se desencola (1,9). Nodos visitados: 42. Elementos pendientes en cola: 7.
+  Revisa arriba -> (0,9): libre, se marca como visitado y se encola.
+  Revisa derecha -> (1,10): no se encola porque esta fuera del mapa.
+  Revisa abajo -> (2,9): no se encola porque es un obstaculo.
+  Revisa izquierda -> (1,8): no se encola porque ya fue visitado.
+Paso 43: se desencola (2,8). Nodos visitados: 43. Elementos pendientes en cola: 7.
+  Revisa arriba -> (1,8): no se encola porque ya fue visitado.
+  Revisa derecha -> (2,9): no se encola porque es un obstaculo.
+  Revisa abajo -> (3,8): no se encola porque es un obstaculo.
+  Revisa izquierda -> (2,7): no se encola porque es un obstaculo.
+Paso 44: se desencola (3,7). Nodos visitados: 44. Elementos pendientes en cola: 6.
+  Revisa arriba -> (2,7): no se encola porque es un obstaculo.
+  Revisa derecha -> (3,8): no se encola porque es un obstaculo.
+  Revisa abajo -> (4,7): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (3,6): no se encola porque ya fue visitado.
+Paso 45: se desencola (4,6). Nodos visitados: 45. Elementos pendientes en cola: 6.
+  Revisa arriba -> (3,6): no se encola porque ya fue visitado.
+  Revisa derecha -> (4,7): no se encola porque ya fue visitado.
+  Revisa abajo -> (5,6): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (4,5): no se encola porque es un obstaculo.
+Paso 46: se desencola (5,5). Nodos visitados: 46. Elementos pendientes en cola: 6.
+  Revisa arriba -> (4,5): no se encola porque es un obstaculo.
+  Revisa derecha -> (5,6): no se encola porque ya fue visitado.
+  Revisa abajo -> (6,5): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (5,4): no se encola porque ya fue visitado.
+Paso 47: se desencola (6,4). Nodos visitados: 47. Elementos pendientes en cola: 6.
+  Revisa arriba -> (5,4): no se encola porque ya fue visitado.
+  Revisa derecha -> (6,5): no se encola porque ya fue visitado.
+  Revisa abajo -> (7,4): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (6,3): no se encola porque es un obstaculo.
+Paso 48: se desencola (7,3). Nodos visitados: 48. Elementos pendientes en cola: 6.
+  Revisa arriba -> (6,3): no se encola porque es un obstaculo.
+  Revisa derecha -> (7,4): no se encola porque ya fue visitado.
+  Revisa abajo -> (8,3): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (7,2): no se encola porque ya fue visitado.
+Paso 49: se desencola (8,0). Nodos visitados: 49. Elementos pendientes en cola: 6.
+  Revisa arriba -> (7,0): no se encola porque ya fue visitado.
+  Revisa derecha -> (8,1): libre, se marca como visitado y se encola.
+  Revisa abajo -> (9,0): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (8,-1): no se encola porque esta fuera del mapa.
+Paso 50: se desencola (0,9). Nodos visitados: 50. Elementos pendientes en cola: 7.
+  Revisa arriba -> (-1,9): no se encola porque esta fuera del mapa.
+  Revisa derecha -> (0,10): no se encola porque esta fuera del mapa.
+  Revisa abajo -> (1,9): no se encola porque ya fue visitado.
+  Revisa izquierda -> (0,8): no se encola porque es un obstaculo.
+Paso 51: se desencola (4,7). Nodos visitados: 51. Elementos pendientes en cola: 6.
+  Revisa arriba -> (3,7): no se encola porque ya fue visitado.
+  Revisa derecha -> (4,8): no se encola porque es un obstaculo.
+  Revisa abajo -> (5,7): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (4,6): no se encola porque ya fue visitado.
+Paso 52: se desencola (5,6). Nodos visitados: 52. Elementos pendientes en cola: 6.
+  Revisa arriba -> (4,6): no se encola porque ya fue visitado.
+  Revisa derecha -> (5,7): no se encola porque ya fue visitado.
+  Revisa abajo -> (6,6): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (5,5): no se encola porque ya fue visitado.
+Paso 53: se desencola (6,5). Nodos visitados: 53. Elementos pendientes en cola: 6.
+  Revisa arriba -> (5,5): no se encola porque ya fue visitado.
+  Revisa derecha -> (6,6): no se encola porque ya fue visitado.
+  Revisa abajo -> (7,5): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (6,4): no se encola porque ya fue visitado.
+Paso 54: se desencola (7,4). Nodos visitados: 54. Elementos pendientes en cola: 6.
+  Revisa arriba -> (6,4): no se encola porque ya fue visitado.
+  Revisa derecha -> (7,5): no se encola porque ya fue visitado.
+  Revisa abajo -> (8,4): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (7,3): no se encola porque ya fue visitado.
+Paso 55: se desencola (8,3). Nodos visitados: 55. Elementos pendientes en cola: 6.
+  Revisa arriba -> (7,3): no se encola porque ya fue visitado.
+  Revisa derecha -> (8,4): no se encola porque ya fue visitado.
+  Revisa abajo -> (9,3): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (8,2): no se encola porque es un obstaculo.
+Paso 56: se desencola (8,1). Nodos visitados: 56. Elementos pendientes en cola: 6.
+  Revisa arriba -> (7,1): no se encola porque es un obstaculo.
+  Revisa derecha -> (8,2): no se encola porque es un obstaculo.
+  Revisa abajo -> (9,1): no se encola porque es un obstaculo.
+  Revisa izquierda -> (8,0): no se encola porque ya fue visitado.
+Paso 57: se desencola (9,0). Nodos visitados: 57. Elementos pendientes en cola: 5.
+  Revisa arriba -> (8,0): no se encola porque ya fue visitado.
+  Revisa derecha -> (9,1): no se encola porque es un obstaculo.
+  Revisa abajo -> (10,0): no se encola porque esta fuera del mapa.
+  Revisa izquierda -> (9,-1): no se encola porque esta fuera del mapa.
+Paso 58: se desencola (5,7). Nodos visitados: 58. Elementos pendientes en cola: 4.
+  Revisa arriba -> (4,7): no se encola porque ya fue visitado.
+  Revisa derecha -> (5,8): libre, se marca como visitado y se encola.
+  Revisa abajo -> (6,7): no se encola porque es un obstaculo.
+  Revisa izquierda -> (5,6): no se encola porque ya fue visitado.
+Paso 59: se desencola (6,6). Nodos visitados: 59. Elementos pendientes en cola: 4.
+  Revisa arriba -> (5,6): no se encola porque ya fue visitado.
+  Revisa derecha -> (6,7): no se encola porque es un obstaculo.
+  Revisa abajo -> (7,6): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (6,5): no se encola porque ya fue visitado.
+Paso 60: se desencola (7,5). Nodos visitados: 60. Elementos pendientes en cola: 4.
+  Revisa arriba -> (6,5): no se encola porque ya fue visitado.
+  Revisa derecha -> (7,6): no se encola porque ya fue visitado.
+  Revisa abajo -> (8,5): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (7,4): no se encola porque ya fue visitado.
+Paso 61: se desencola (8,4). Nodos visitados: 61. Elementos pendientes en cola: 4.
+  Revisa arriba -> (7,4): no se encola porque ya fue visitado.
+  Revisa derecha -> (8,5): no se encola porque ya fue visitado.
+  Revisa abajo -> (9,4): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (8,3): no se encola porque ya fue visitado.
+Paso 62: se desencola (9,3). Nodos visitados: 62. Elementos pendientes en cola: 4.
+  Revisa arriba -> (8,3): no se encola porque ya fue visitado.
+  Revisa derecha -> (9,4): no se encola porque ya fue visitado.
+  Revisa abajo -> (10,3): no se encola porque esta fuera del mapa.
+  Revisa izquierda -> (9,2): libre, se marca como visitado y se encola.
+Paso 63: se desencola (5,8). Nodos visitados: 63. Elementos pendientes en cola: 4.
+  Revisa arriba -> (4,8): no se encola porque es un obstaculo.
+  Revisa derecha -> (5,9): libre, se marca como visitado y se encola.
+  Revisa abajo -> (6,8): no se encola porque es un obstaculo.
+  Revisa izquierda -> (5,7): no se encola porque ya fue visitado.
+Paso 64: se desencola (7,6). Nodos visitados: 64. Elementos pendientes en cola: 4.
+  Revisa arriba -> (6,6): no se encola porque ya fue visitado.
+  Revisa derecha -> (7,7): libre, se marca como visitado y se encola.
+  Revisa abajo -> (8,6): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (7,5): no se encola porque ya fue visitado.
+Paso 65: se desencola (8,5). Nodos visitados: 65. Elementos pendientes en cola: 5.
+  Revisa arriba -> (7,5): no se encola porque ya fue visitado.
+  Revisa derecha -> (8,6): no se encola porque ya fue visitado.
+  Revisa abajo -> (9,5): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (8,4): no se encola porque ya fue visitado.
+Paso 66: se desencola (9,4). Nodos visitados: 66. Elementos pendientes en cola: 5.
+  Revisa arriba -> (8,4): no se encola porque ya fue visitado.
+  Revisa derecha -> (9,5): no se encola porque ya fue visitado.
+  Revisa abajo -> (10,4): no se encola porque esta fuera del mapa.
+  Revisa izquierda -> (9,3): no se encola porque ya fue visitado.
+Paso 67: se desencola (9,2). Nodos visitados: 67. Elementos pendientes en cola: 4.
+  Revisa arriba -> (8,2): no se encola porque es un obstaculo.
+  Revisa derecha -> (9,3): no se encola porque ya fue visitado.
+  Revisa abajo -> (10,2): no se encola porque esta fuera del mapa.
+  Revisa izquierda -> (9,1): no se encola porque es un obstaculo.
+Paso 68: se desencola (5,9). Nodos visitados: 68. Elementos pendientes en cola: 3.
+  Revisa arriba -> (4,9): libre, se marca como visitado y se encola.
+  Revisa derecha -> (5,10): no se encola porque esta fuera del mapa.
+  Revisa abajo -> (6,9): no se encola porque es un obstaculo.
+  Revisa izquierda -> (5,8): no se encola porque ya fue visitado.
+Paso 69: se desencola (7,7). Nodos visitados: 69. Elementos pendientes en cola: 3.
+  Revisa arriba -> (6,7): no se encola porque es un obstaculo.
+  Revisa derecha -> (7,8): no se encola porque es un obstaculo.
+  Revisa abajo -> (8,7): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (7,6): no se encola porque ya fue visitado.
+Paso 70: se desencola (8,6). Nodos visitados: 70. Elementos pendientes en cola: 3.
+  Revisa arriba -> (7,6): no se encola porque ya fue visitado.
+  Revisa derecha -> (8,7): no se encola porque ya fue visitado.
+  Revisa abajo -> (9,6): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (8,5): no se encola porque ya fue visitado.
+Paso 71: se desencola (9,5). Nodos visitados: 71. Elementos pendientes en cola: 3.
+  Revisa arriba -> (8,5): no se encola porque ya fue visitado.
+  Revisa derecha -> (9,6): no se encola porque ya fue visitado.
+  Revisa abajo -> (10,5): no se encola porque esta fuera del mapa.
+  Revisa izquierda -> (9,4): no se encola porque ya fue visitado.
+Paso 72: se desencola (4,9). Nodos visitados: 72. Elementos pendientes en cola: 2.
+  Revisa arriba -> (3,9): no se encola porque es un obstaculo.
+  Revisa derecha -> (4,10): no se encola porque esta fuera del mapa.
+  Revisa abajo -> (5,9): no se encola porque ya fue visitado.
+  Revisa izquierda -> (4,8): no se encola porque es un obstaculo.
+Paso 73: se desencola (8,7). Nodos visitados: 73. Elementos pendientes en cola: 1.
+  Revisa arriba -> (7,7): no se encola porque ya fue visitado.
+  Revisa derecha -> (8,8): libre, se marca como visitado y se encola.
+  Revisa abajo -> (9,7): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (8,6): no se encola porque ya fue visitado.
+Paso 74: se desencola (9,6). Nodos visitados: 74. Elementos pendientes en cola: 2.
+  Revisa arriba -> (8,6): no se encola porque ya fue visitado.
+  Revisa derecha -> (9,7): no se encola porque ya fue visitado.
+  Revisa abajo -> (10,6): no se encola porque esta fuera del mapa.
+  Revisa izquierda -> (9,5): no se encola porque ya fue visitado.
+Paso 75: se desencola (8,8). Nodos visitados: 75. Elementos pendientes en cola: 1.
+  Revisa arriba -> (7,8): no se encola porque es un obstaculo.
+  Revisa derecha -> (8,9): libre, se marca como visitado y se encola.
+  Revisa abajo -> (9,8): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (8,7): no se encola porque ya fue visitado.
+Paso 76: se desencola (9,7). Nodos visitados: 76. Elementos pendientes en cola: 2.
+  Revisa arriba -> (8,7): no se encola porque ya fue visitado.
+  Revisa derecha -> (9,8): no se encola porque ya fue visitado.
+  Revisa abajo -> (10,7): no se encola porque esta fuera del mapa.
+  Revisa izquierda -> (9,6): no se encola porque ya fue visitado.
+Paso 77: se desencola (8,9). Nodos visitados: 77. Elementos pendientes en cola: 1.
+  Revisa arriba -> (7,9): libre, se marca como visitado y se encola.
+  Revisa derecha -> (8,10): no se encola porque esta fuera del mapa.
+  Revisa abajo -> (9,9): libre, se marca como visitado y se encola.
+  Revisa izquierda -> (8,8): no se encola porque ya fue visitado.
+Paso 78: se desencola (9,8). Nodos visitados: 78. Elementos pendientes en cola: 2.
+  Revisa arriba -> (8,8): no se encola porque ya fue visitado.
+  Revisa derecha -> (9,9): no se encola porque ya fue visitado.
+  Revisa abajo -> (10,8): no se encola porque esta fuera del mapa.
+  Revisa izquierda -> (9,7): no se encola porque ya fue visitado.
+Paso 79: se desencola (7,9). Nodos visitados: 79. Elementos pendientes en cola: 1.
+  Revisa arriba -> (6,9): no se encola porque es un obstaculo.
+  Revisa derecha -> (7,10): no se encola porque esta fuera del mapa.
+  Revisa abajo -> (8,9): no se encola porque ya fue visitado.
+  Revisa izquierda -> (7,8): no se encola porque es un obstaculo.
+Paso 80: se desencola (9,9). Nodos visitados: 80. Elementos pendientes en cola: 0.
+Destino encontrado. Se detiene BFS.
+Resumen BFS:
+  Encontro ruta: si
+  Longitud de ruta: 18
+  Maximo de la cola: 8
+  Ruta: (0,0) -> (0,1) -> (0,2) -> (0,3) -> (0,4) -> (0,5) -> (1,5) -> (2,5) -> (2,6) -> (3,6) -> (4,6) -> (5,6) -> (6,6) -> (7,6) -> (7,7) -> (8,7) -> (8,8) -> (8,9) -> (9,9)
+
+
+DFS - Busqueda en profundidad
+Estructura usada: pila (LIFO).
+Orden de exploracion buscado: arriba, derecha, abajo, izquierda.
+Como la pila saca el ultimo que entra, los vecinos se apilan en orden inverso.
+Inicio: (0,0) | Destino: (9,9)
+Se apila el nodo inicial (0,0).
+Paso 1: se desapila (0,0). Elementos pendientes en pila: 0.
+  Se marca como visitado. Nodos visitados: 1.
+  Revisa izquierda -> (0,-1): no se apila porque esta fuera del mapa.
+  Revisa abajo -> (1,0): libre, se descubre y se apila.
+  Revisa derecha -> (0,1): libre, se descubre y se apila.
+  Revisa arriba -> (-1,0): no se apila porque esta fuera del mapa.
+Paso 2: se desapila (0,1). Elementos pendientes en pila: 1.
+  Se marca como visitado. Nodos visitados: 2.
+  Revisa izquierda -> (0,0): no se apila porque ya fue descubierto.
+  Revisa abajo -> (1,1): libre, se descubre y se apila.
+  Revisa derecha -> (0,2): libre, se descubre y se apila.
+  Revisa arriba -> (-1,1): no se apila porque esta fuera del mapa.
+Paso 3: se desapila (0,2). Elementos pendientes en pila: 2.
+  Se marca como visitado. Nodos visitados: 3.
+  Revisa izquierda -> (0,1): no se apila porque ya fue descubierto.
+  Revisa abajo -> (1,2): libre, se descubre y se apila.
+  Revisa derecha -> (0,3): libre, se descubre y se apila.
+  Revisa arriba -> (-1,2): no se apila porque esta fuera del mapa.
+Paso 4: se desapila (0,3). Elementos pendientes en pila: 3.
+  Se marca como visitado. Nodos visitados: 4.
+  Revisa izquierda -> (0,2): no se apila porque ya fue descubierto.
+  Revisa abajo -> (1,3): libre, se descubre y se apila.
+  Revisa derecha -> (0,4): libre, se descubre y se apila.
+  Revisa arriba -> (-1,3): no se apila porque esta fuera del mapa.
+Paso 5: se desapila (0,4). Elementos pendientes en pila: 4.
+  Se marca como visitado. Nodos visitados: 5.
+  Revisa izquierda -> (0,3): no se apila porque ya fue descubierto.
+  Revisa abajo -> (1,4): libre, se descubre y se apila.
+  Revisa derecha -> (0,5): libre, se descubre y se apila.
+  Revisa arriba -> (-1,4): no se apila porque esta fuera del mapa.
+Paso 6: se desapila (0,5). Elementos pendientes en pila: 5.
+  Se marca como visitado. Nodos visitados: 6.
+  Revisa izquierda -> (0,4): no se apila porque ya fue descubierto.
+  Revisa abajo -> (1,5): libre, se descubre y se apila.
+  Revisa derecha -> (0,6): libre, se descubre y se apila.
+  Revisa arriba -> (-1,5): no se apila porque esta fuera del mapa.
+Paso 7: se desapila (0,6). Elementos pendientes en pila: 6.
+  Se marca como visitado. Nodos visitados: 7.
+  Revisa izquierda -> (0,5): no se apila porque ya fue descubierto.
+  Revisa abajo -> (1,6): no se apila porque es un obstaculo.
+  Revisa derecha -> (0,7): libre, se descubre y se apila.
+  Revisa arriba -> (-1,6): no se apila porque esta fuera del mapa.
+Paso 8: se desapila (0,7). Elementos pendientes en pila: 6.
+  Se marca como visitado. Nodos visitados: 8.
+  Revisa izquierda -> (0,6): no se apila porque ya fue descubierto.
+  Revisa abajo -> (1,7): libre, se descubre y se apila.
+  Revisa derecha -> (0,8): no se apila porque es un obstaculo.
+  Revisa arriba -> (-1,7): no se apila porque esta fuera del mapa.
+Paso 9: se desapila (1,7). Elementos pendientes en pila: 6.
+  Se marca como visitado. Nodos visitados: 9.
+  Revisa izquierda -> (1,6): no se apila porque es un obstaculo.
+  Revisa abajo -> (2,7): no se apila porque es un obstaculo.
+  Revisa derecha -> (1,8): libre, se descubre y se apila.
+  Revisa arriba -> (0,7): no se apila porque ya fue descubierto.
+Paso 10: se desapila (1,8). Elementos pendientes en pila: 6.
+  Se marca como visitado. Nodos visitados: 10.
+  Revisa izquierda -> (1,7): no se apila porque ya fue descubierto.
+  Revisa abajo -> (2,8): libre, se descubre y se apila.
+  Revisa derecha -> (1,9): libre, se descubre y se apila.
+  Revisa arriba -> (0,8): no se apila porque es un obstaculo.
+Paso 11: se desapila (1,9). Elementos pendientes en pila: 7.
+  Se marca como visitado. Nodos visitados: 11.
+  Revisa izquierda -> (1,8): no se apila porque ya fue descubierto.
+  Revisa abajo -> (2,9): no se apila porque es un obstaculo.
+  Revisa derecha -> (1,10): no se apila porque esta fuera del mapa.
+  Revisa arriba -> (0,9): libre, se descubre y se apila.
+Paso 12: se desapila (0,9). Elementos pendientes en pila: 7.
+  Se marca como visitado. Nodos visitados: 12.
+  Revisa izquierda -> (0,8): no se apila porque es un obstaculo.
+  Revisa abajo -> (1,9): no se apila porque ya fue descubierto.
+  Revisa derecha -> (0,10): no se apila porque esta fuera del mapa.
+  Revisa arriba -> (-1,9): no se apila porque esta fuera del mapa.
+Paso 13: se desapila (2,8). Elementos pendientes en pila: 6.
+  Se marca como visitado. Nodos visitados: 13.
+  Revisa izquierda -> (2,7): no se apila porque es un obstaculo.
+  Revisa abajo -> (3,8): no se apila porque es un obstaculo.
+  Revisa derecha -> (2,9): no se apila porque es un obstaculo.
+  Revisa arriba -> (1,8): no se apila porque ya fue descubierto.
+Paso 14: se desapila (1,5). Elementos pendientes en pila: 5.
+  Se marca como visitado. Nodos visitados: 14.
+  Revisa izquierda -> (1,4): no se apila porque ya fue descubierto.
+  Revisa abajo -> (2,5): libre, se descubre y se apila.
+  Revisa derecha -> (1,6): no se apila porque es un obstaculo.
+  Revisa arriba -> (0,5): no se apila porque ya fue descubierto.
+Paso 15: se desapila (2,5). Elementos pendientes en pila: 5.
+  Se marca como visitado. Nodos visitados: 15.
+  Revisa izquierda -> (2,4): libre, se descubre y se apila.
+  Revisa abajo -> (3,5): libre, se descubre y se apila.
+  Revisa derecha -> (2,6): libre, se descubre y se apila.
+  Revisa arriba -> (1,5): no se apila porque ya fue descubierto.
+Paso 16: se desapila (2,6). Elementos pendientes en pila: 7.
+  Se marca como visitado. Nodos visitados: 16.
+  Revisa izquierda -> (2,5): no se apila porque ya fue descubierto.
+  Revisa abajo -> (3,6): libre, se descubre y se apila.
+  Revisa derecha -> (2,7): no se apila porque es un obstaculo.
+  Revisa arriba -> (1,6): no se apila porque es un obstaculo.
+Paso 17: se desapila (3,6). Elementos pendientes en pila: 7.
+  Se marca como visitado. Nodos visitados: 17.
+  Revisa izquierda -> (3,5): no se apila porque ya fue descubierto.
+  Revisa abajo -> (4,6): libre, se descubre y se apila.
+  Revisa derecha -> (3,7): libre, se descubre y se apila.
+  Revisa arriba -> (2,6): no se apila porque ya fue descubierto.
+Paso 18: se desapila (3,7). Elementos pendientes en pila: 8.
+  Se marca como visitado. Nodos visitados: 18.
+  Revisa izquierda -> (3,6): no se apila porque ya fue descubierto.
+  Revisa abajo -> (4,7): libre, se descubre y se apila.
+  Revisa derecha -> (3,8): no se apila porque es un obstaculo.
+  Revisa arriba -> (2,7): no se apila porque es un obstaculo.
+Paso 19: se desapila (4,7). Elementos pendientes en pila: 8.
+  Se marca como visitado. Nodos visitados: 19.
+  Revisa izquierda -> (4,6): no se apila porque ya fue descubierto.
+  Revisa abajo -> (5,7): libre, se descubre y se apila.
+  Revisa derecha -> (4,8): no se apila porque es un obstaculo.
+  Revisa arriba -> (3,7): no se apila porque ya fue descubierto.
+Paso 20: se desapila (5,7). Elementos pendientes en pila: 8.
+  Se marca como visitado. Nodos visitados: 20.
+  Revisa izquierda -> (5,6): libre, se descubre y se apila.
+  Revisa abajo -> (6,7): no se apila porque es un obstaculo.
+  Revisa derecha -> (5,8): libre, se descubre y se apila.
+  Revisa arriba -> (4,7): no se apila porque ya fue descubierto.
+Paso 21: se desapila (5,8). Elementos pendientes en pila: 9.
+  Se marca como visitado. Nodos visitados: 21.
+  Revisa izquierda -> (5,7): no se apila porque ya fue descubierto.
+  Revisa abajo -> (6,8): no se apila porque es un obstaculo.
+  Revisa derecha -> (5,9): libre, se descubre y se apila.
+  Revisa arriba -> (4,8): no se apila porque es un obstaculo.
+Paso 22: se desapila (5,9). Elementos pendientes en pila: 9.
+  Se marca como visitado. Nodos visitados: 22.
+  Revisa izquierda -> (5,8): no se apila porque ya fue descubierto.
+  Revisa abajo -> (6,9): no se apila porque es un obstaculo.
+  Revisa derecha -> (5,10): no se apila porque esta fuera del mapa.
+  Revisa arriba -> (4,9): libre, se descubre y se apila.
+Paso 23: se desapila (4,9). Elementos pendientes en pila: 9.
+  Se marca como visitado. Nodos visitados: 23.
+  Revisa izquierda -> (4,8): no se apila porque es un obstaculo.
+  Revisa abajo -> (5,9): no se apila porque ya fue descubierto.
+  Revisa derecha -> (4,10): no se apila porque esta fuera del mapa.
+  Revisa arriba -> (3,9): no se apila porque es un obstaculo.
+Paso 24: se desapila (5,6). Elementos pendientes en pila: 8.
+  Se marca como visitado. Nodos visitados: 24.
+  Revisa izquierda -> (5,5): libre, se descubre y se apila.
+  Revisa abajo -> (6,6): libre, se descubre y se apila.
+  Revisa derecha -> (5,7): no se apila porque ya fue descubierto.
+  Revisa arriba -> (4,6): no se apila porque ya fue descubierto.
+Paso 25: se desapila (6,6). Elementos pendientes en pila: 9.
+  Se marca como visitado. Nodos visitados: 25.
+  Revisa izquierda -> (6,5): libre, se descubre y se apila.
+  Revisa abajo -> (7,6): libre, se descubre y se apila.
+  Revisa derecha -> (6,7): no se apila porque es un obstaculo.
+  Revisa arriba -> (5,6): no se apila porque ya fue descubierto.
+Paso 26: se desapila (7,6). Elementos pendientes en pila: 10.
+  Se marca como visitado. Nodos visitados: 26.
+  Revisa izquierda -> (7,5): libre, se descubre y se apila.
+  Revisa abajo -> (8,6): libre, se descubre y se apila.
+  Revisa derecha -> (7,7): libre, se descubre y se apila.
+  Revisa arriba -> (6,6): no se apila porque ya fue descubierto.
+Paso 27: se desapila (7,7). Elementos pendientes en pila: 12.
+  Se marca como visitado. Nodos visitados: 27.
+  Revisa izquierda -> (7,6): no se apila porque ya fue descubierto.
+  Revisa abajo -> (8,7): libre, se descubre y se apila.
+  Revisa derecha -> (7,8): no se apila porque es un obstaculo.
+  Revisa arriba -> (6,7): no se apila porque es un obstaculo.
+Paso 28: se desapila (8,7). Elementos pendientes en pila: 12.
+  Se marca como visitado. Nodos visitados: 28.
+  Revisa izquierda -> (8,6): no se apila porque ya fue descubierto.
+  Revisa abajo -> (9,7): libre, se descubre y se apila.
+  Revisa derecha -> (8,8): libre, se descubre y se apila.
+  Revisa arriba -> (7,7): no se apila porque ya fue descubierto.
+Paso 29: se desapila (8,8). Elementos pendientes en pila: 13.
+  Se marca como visitado. Nodos visitados: 29.
+  Revisa izquierda -> (8,7): no se apila porque ya fue descubierto.
+  Revisa abajo -> (9,8): libre, se descubre y se apila.
+  Revisa derecha -> (8,9): libre, se descubre y se apila.
+  Revisa arriba -> (7,8): no se apila porque es un obstaculo.
+Paso 30: se desapila (8,9). Elementos pendientes en pila: 14.
+  Se marca como visitado. Nodos visitados: 30.
+  Revisa izquierda -> (8,8): no se apila porque ya fue descubierto.
+  Revisa abajo -> (9,9): libre, se descubre y se apila.
+  Revisa derecha -> (8,10): no se apila porque esta fuera del mapa.
+  Revisa arriba -> (7,9): libre, se descubre y se apila.
+Paso 31: se desapila (7,9). Elementos pendientes en pila: 15.
+  Se marca como visitado. Nodos visitados: 31.
+  Revisa izquierda -> (7,8): no se apila porque es un obstaculo.
+  Revisa abajo -> (8,9): no se apila porque ya fue descubierto.
+  Revisa derecha -> (7,10): no se apila porque esta fuera del mapa.
+  Revisa arriba -> (6,9): no se apila porque es un obstaculo.
+Paso 32: se desapila (9,9). Elementos pendientes en pila: 14.
+  Se marca como visitado. Nodos visitados: 32.
+Destino encontrado. Se detiene DFS.
+Resumen DFS:
+  Encontro ruta: si
+  Longitud de ruta: 20
+  Maximo de la pila: 16
+  Ruta: (0,0) -> (0,1) -> (0,2) -> (0,3) -> (0,4) -> (0,5) -> (1,5) -> (2,5) -> (2,6) -> (3,6) -> (3,7) -> (4,7) -> (5,7) -> (5,6) -> (6,6) -> (7,6) -> (7,7) -> (8,7) -> (8,8) -> (8,9) -> (9,9)
+

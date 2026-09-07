@@ -1,0 +1,12 @@
+.DS_Store
+/build/
+/dist/
+/tmp/
+/nbproject/private/
+/.vscode/
+/salida_resultados/equipo_ejecucion.txt
+/salida_resultados/proceso_comparacion.txt
+/scripts/generar_pdf_reparto_exposicion.py
+*.class
+*.jar
+*.log

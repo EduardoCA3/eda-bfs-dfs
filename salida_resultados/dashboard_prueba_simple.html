@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grafico prueba simple BFS vs DFS</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; background: #f3f4f6; color: #111827; }
+        header { background: #111827; color: white; padding: 26px 34px; }
+        header h1 { margin: 0 0 8px; font-size: 30px; }
+        header p { margin: 0; color: #d1d5db; }
+        main { width: min(1120px, calc(100% - 32px)); margin: 22px auto 44px; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .chart, .table-wrap { background: white; border: 1px solid #d1d5db; padding: 12px; overflow-x: auto; }
+        .chart img { width: 100%; min-width: 520px; display: block; }
+        .table-wrap { margin-top: 18px; padding: 16px; }
+        table { border-collapse: collapse; width: 100%; font-size: 14px; }
+        th, td { border-bottom: 1px solid #e5e7eb; padding: 10px; text-align: left; white-space: nowrap; }
+        th { background: #f9fafb; color: #374151; }
+        .pill { color: white; padding: 3px 9px; font-weight: 700; font-size: 12px; }
+        .pill.bfs { background: #2563eb; }
+        .pill.dfs { background: #f97316; }
+        footer { color: #4b5563; margin-top: 16px; font-size: 13px; }
+        @media (max-width: 850px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prueba simple BFS vs DFS</h1>
+        <p>Graficos de barras generados desde salida_resultados/prueba_simple_resultados.csv</p>
+    </header>
+    <main>
+        <section class="grid">
+            <section class='chart'><img src='graficos/prueba_simple_tiempoMs.svg' alt='prueba_simple_tiempoMs.svg'></section>
+<section class='chart'><img src='graficos/prueba_simple_nodosVisitados.svg' alt='prueba_simple_nodosVisitados.svg'></section>
+<section class='chart'><img src='graficos/prueba_simple_longitudRuta.svg' alt='prueba_simple_longitudRuta.svg'></section>
+<section class='chart'><img src='graficos/prueba_simple_memoriaAprox.svg' alt='prueba_simple_memoriaAprox.svg'></section>
+        </section>
+        <section class="table-wrap">
+            <h2>Datos usados</h2>
+            <table>
+<thead><tr><th>Algoritmo</th><th>Tiempo</th><th>Nodos visitados</th><th>Ruta</th><th>Max cola/pila</th><th>Memoria</th></tr></thead>
+<tbody>
+<tr><td><span class='pill bfs'>BFS</span></td><td>0.0824 ms</td><td>80</td><td>18</td><td>8</td><td>88</td></tr>
+<tr><td><span class='pill dfs'>DFS</span></td><td>0.4614 ms</td><td>32</td><td>20</td><td>16</td><td>48</td></tr>
+</tbody>
+</table>
+        </section>
+        <footer>Generado: 2026-06-25 22:58:31</footer>
+    </main>
+</body>
+</html>

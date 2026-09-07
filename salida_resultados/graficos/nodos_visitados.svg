@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="540" viewBox="0 0 1120 540">
+<style>
+.titulo{font:700 24px Arial, sans-serif;fill:#111827}
+.subtitulo{font:400 14px Arial, sans-serif;fill:#4b5563}
+.eje{font:400 12px Arial, sans-serif;fill:#374151}
+.valor{font:700 11px Arial, sans-serif;fill:#111827}
+.leyenda{font:700 13px Arial, sans-serif;fill:#111827}
+.grid{stroke:#e5e7eb;stroke-width:1}
+.axis{stroke:#9ca3af;stroke-width:1.3}
+</style>
+<rect x="0" y="0" width="1120" height="540" rx="0" fill="#ffffff"/>
+<text x="560.0" y="34" text-anchor="middle" class="titulo" >Nodos visitados promedio</text>
+<text x="560.0" y="58" text-anchor="middle" class="subtitulo" >Mide cuanto explora cada algoritmo antes de llegar al destino.</text>
+<line x1="76" y1="428.0" x2="1088" y2="428.0" class="grid"/>
+<text x="64" y="432.0" text-anchor="end" class="eje" >0.0</text>
+<line x1="76" y1="360.8" x2="1088" y2="360.8" class="grid"/>
+<text x="64" y="364.8" text-anchor="end" class="eje" >517.4</text>
+<line x1="76" y1="293.6" x2="1088" y2="293.6" class="grid"/>
+<text x="64" y="297.6" text-anchor="end" class="eje" >1034.8</text>
+<line x1="76" y1="226.4" x2="1088" y2="226.4" class="grid"/>
+<text x="64" y="230.4" text-anchor="end" class="eje" >1552.2</text>
+<line x1="76" y1="159.2" x2="1088" y2="159.2" class="grid"/>
+<text x="64" y="163.20000000000005" text-anchor="end" class="eje" >2069.6</text>
+<line x1="76" y1="92.0" x2="1088" y2="92.0" class="grid"/>
+<text x="64" y="96.0" text-anchor="end" class="eje" >2587.0</text>
+<line x1="76" y1="92" x2="76" y2="428" class="axis"/>
+<line x1="76" y1="428" x2="1088" y2="428" class="axis"/>
+<rect x="930" y="65" width="14" height="14" fill="#2563eb"/>
+<text x="952" y="78" text-anchor="start" class="leyenda" >BFS</text>
+<rect x="1000" y="65" width="14" height="14" fill="#f97316"/>
+<text x="1022" y="78" text-anchor="start" class="leyenda" >DFS</text>
+<rect x="101.2" y="416.4" width="28.0" height="11.6" fill="#2563eb"/>
+<text x="115.22222222222223" y="410.35408558556526" text-anchor="middle" class="valor" >89.7</text>
+<rect x="135.2" y="424.9" width="28.0" height="3.1" fill="#f97316"/>
+<text x="149.22222222222223" y="418.94348863323756" text-anchor="middle" class="valor" >23.5</text>
+<text x="132.22222222222223" y="454" text-anchor="middle" class="eje" >10x10</text>
+<text x="132.22222222222223" y="472" text-anchor="middle" class="eje" >10% obs.</text>
+<rect x="213.7" y="417.9" width="28.0" height="10.1" fill="#2563eb"/>
+<text x="227.66666666666669" y="411.8909999413736" text-anchor="middle" class="valor" >77.8</text>
+<rect x="247.7" y="424.2" width="28.0" height="3.8" fill="#f97316"/>
+<text x="261.6666666666667" y="418.17286678722667" text-anchor="middle" class="valor" >29.5</text>
+<text x="244.66666666666669" y="454" text-anchor="middle" class="eje" >10x10</text>
+<text x="244.66666666666669" y="472" text-anchor="middle" class="eje" >20% obs.</text>
+<rect x="326.1" y="420.3" width="28.0" height="7.7" fill="#2563eb"/>
+<text x="340.11111111111114" y="414.2851228674637" text-anchor="middle" class="valor" >59.4</text>
+<rect x="360.1" y="423.7" width="28.0" height="4.3" fill="#f97316"/>
+<text x="374.11111111111114" y="417.68798113130964" text-anchor="middle" class="valor" >33.2</text>
+<text x="357.11111111111114" y="454" text-anchor="middle" class="eje" >10x10</text>
+<text x="357.11111111111114" y="472" text-anchor="middle" class="eje" >30% obs.</text>
+<rect x="438.6" y="381.3" width="28.0" height="46.7" fill="#2563eb"/>
+<text x="452.55555555555554" y="375.2561569023599" text-anchor="middle" class="valor" >359.9</text>
+<rect x="472.6" y="421.6" width="28.0" height="6.4" fill="#f97316"/>
+<text x="486.55555555555554" y="415.583923731527" text-anchor="middle" class="valor" >49.4</text>
+<text x="469.55555555555554" y="454" text-anchor="middle" class="eje" >20x20</text>
+<text x="469.55555555555554" y="472" text-anchor="middle" class="eje" >10% obs.</text>
+<rect x="551.0" y="386.7" width="28.0" height="41.3" fill="#2563eb"/>
+<text x="565.0" y="380.6808151779312" text-anchor="middle" class="valor" >318.1</text>
+<rect x="585.0" y="418.1" width="28.0" height="9.9" fill="#f97316"/>
+<text x="599.0" y="412.1074667520508" text-anchor="middle" class="valor" >76.2</text>
+<text x="582.0" y="454" text-anchor="middle" class="eje" >20x20</text>
+<text x="582.0" y="472" text-anchor="middle" class="eje" >20% obs.</text>
+<rect x="663.4" y="394.2" width="28.0" height="33.8" fill="#2563eb"/>
+<text x="677.4444444444443" y="388.21386018949863" text-anchor="middle" class="valor" >260.1</text>
+<rect x="697.4" y="414.0" width="28.0" height="14.0" fill="#f97316"/>
+<text x="711.4444444444443" y="408.0422200475325" text-anchor="middle" class="valor" >107.5</text>
+<text x="694.4444444444443" y="454" text-anchor="middle" class="eje" >20x20</text>
+<text x="694.4444444444443" y="472" text-anchor="middle" class="eje" >30% obs.</text>
+<rect x="775.9" y="135.8" width="28.0" height="292.2" fill="#2563eb"/>
+<text x="789.8888888888888" y="129.82608695652175" text-anchor="middle" class="valor" >2249.6</text>
+<rect x="809.9" y="411.1" width="28.0" height="16.9" fill="#f97316"/>
+<text x="823.8888888888888" y="405.1329061120306" text-anchor="middle" class="valor" >129.9</text>
+<text x="806.8888888888888" y="454" text-anchor="middle" class="eje" >50x50</text>
+<text x="806.8888888888888" y="472" text-anchor="middle" class="eje" >10% obs.</text>
+<rect x="888.3" y="169.2" width="28.0" height="258.8" fill="#2563eb"/>
+<text x="902.3333333333333" y="163.17496380945505" text-anchor="middle" class="valor" >1992.8</text>
+<rect x="922.3" y="391.0" width="28.0" height="37.0" fill="#f97316"/>
+<text x="936.3333333333333" y="384.9971633828351" text-anchor="middle" class="valor" >284.9</text>
+<text x="919.3333333333333" y="454" text-anchor="middle" class="eje" >50x50</text>
+<text x="919.3333333333333" y="472" text-anchor="middle" class="eje" >20% obs.</text>
+<rect x="1000.8" y="208.5" width="28.0" height="219.5" fill="#2563eb"/>
+<text x="1014.7777777777778" y="202.50698330950695" text-anchor="middle" class="valor" >1690.0</text>
+<rect x="1034.8" y="350.8" width="28.0" height="77.2" fill="#f97316"/>
+<text x="1048.7777777777778" y="344.812264648715" text-anchor="middle" class="valor" >594.3</text>
+<text x="1031.7777777777778" y="454" text-anchor="middle" class="eje" >50x50</text>
+<text x="1031.7777777777778" y="472" text-anchor="middle" class="eje" >30% obs.</text>
+</svg>
